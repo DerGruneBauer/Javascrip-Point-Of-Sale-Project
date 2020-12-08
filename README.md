@@ -1,1 +1,1 @@
-# Javascrip-Point-Of-Sale-Project
+# Javascript-Point-Of-Sale-Project
