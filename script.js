@@ -16,3 +16,15 @@ const cafeItems = [
     { name: "Pastry", category:  "Food", description: "Rotating pastry", price:  3},
   
 ]
+
+let image = document.querySelectorAll('img');
+let cart = [];
+
+image.forEach((image) => {
+    image.addEventListener("click", (addToCart) => {
+        
+        //add id number to each HTML element in order to access 
+        //clone image/node and take only the 
+        //code to add item to cart goes here. How to do? cloned node?
+    })
+})
