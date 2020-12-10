@@ -27,3 +27,7 @@ body{
 .checkout:hover {
     height: 100px;
 }
+
+@media only screen and (min-width: 1024px){
+    
+}
