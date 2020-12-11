@@ -12,7 +12,7 @@
     text-decoration: none;
 }
 .headerList{
-    display:none;
+    display:
 }
 
 .companyName{
@@ -26,7 +26,6 @@
         text-decoration: none;
         display: flex;
         align-items: flex-end;
-       
         width: auto;
         margin-right: 7px;
     
@@ -55,12 +54,11 @@ body{
 }
 
 @media only screen and (min-width: 1024px){
-    .li, ul{
+    .menuItems{
         list-style: none;
         text-decoration: none;
         display: flex;
         align-items: flex-end;
-       
         width: auto;
         margin-right: 7px;
     }
