@@ -38,23 +38,26 @@ image.forEach((image) => {
         let checkout = document.querySelector('.checkoutItems');
         let cost = document.querySelector('.totalCost');
         let newCartItem = document.createElement("div");
+        let remove = document.createElement('button');
+        remove.classList.add('delete'); //class called delete added to remove button
+        remove.onclick = removeFromCart;
+        remove.innerHTML = 'X';
         let itemDetails = document.createTextNode(`${cafeItems[idNum].name} will cost ${cafeItems[idNum].price}`);
         newCartItem.appendChild(itemDetails);
         checkout.appendChild(newCartItem);
+        newCartItem.appendChild(remove);
 
         totalCost = cafeItems[idNum].price + totalCost;
         cost.innerHTML = (`<strong>Total Cost: </strong>${totalCost}`);
-
     })
+
 })
 
 //Removal of items from cart
 
-deleteButton.forEach((deleteButton) => {
-    deleteButton.addEventListener('click', (removeFromCart) => {
-
-    })
-})
+const removeFromCart = function () {
+    
+}
 
 
 //Additions of names, descriptions and prices
