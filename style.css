@@ -1,4 +1,3 @@
-
 .mainHeader{
     display: flex;
     align-items: center;
@@ -14,7 +13,6 @@
 .headerList{
     display:
 }
-
 .companyName{
     margin-left: 15px;
     font-family: 'Montserrat', sans-serif;
@@ -28,7 +26,6 @@
         align-items: flex-end;
         width: auto;
         margin-right: 7px;
-    
 }
 .cart{
     border-radius: 5px;
@@ -42,13 +39,11 @@
 body{
     margin:0;
 }
-
 .checkout { /*possible have 'view cart' text that when hovered over will have the transition effect and make the text disappear when viewing cart?*/
     height: 1px;/*either hover effect or on click effect. might be good to make it more permanent when trying to pay etc*/
     width: auto;
     transition: height 1.5s;
 }
-
 .checkout:hover {
     height: 100px;
 }
@@ -90,6 +85,5 @@ body{
     a:visited {
         color: #221c14;
     }
-    
 }
 
