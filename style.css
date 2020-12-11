@@ -6,12 +6,19 @@
     width: 100%;
     height: 65px;
 }
+.companyName{
+    margin-left: 15px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
 .cart{
     border-radius: 5px;
-    padding: 7px
+    padding: 7px;
+    font-family: 'Montserrat', sans-serif;
 }
 .cart:hover{
-    background-color: red;
+    background-color: #c5a880
 }
 body{
     margin:0;
