@@ -1,10 +1,3 @@
-
-
-@media only screen and (min-width: 1024px){
-    
-}
-
-
 .mainHeader{
     display: flex;
     align-items: center;
@@ -17,38 +10,88 @@
     align-items: center;
     text-decoration: none;
 }
+.headerList{
+    display:none;
+}
+.coffeeHeader, .hotDrinkHeader, .coldDrinkHeader, .foodHeader{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 10px solid #532e1c;
+    border-radius: 10px;
+    margin-right: 33%;
+    margin-left: 15px;
+}
+.companyName{
+    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
 .li, ul{
-    list-style: none;
-    text-decoration: none;
-    display: flex;
-    align-items: flex-end;
-   
-    width: auto;
-    margin-right: 7px;
+    
+        list-style: none;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-end;
+        width: auto;
+        margin-right: 7px;
 }
 .cart{
     border-radius: 5px;
     padding: 7px;
     font-family: 'Montserrat', sans-serif;
+    margin-right: 15px;
 }
 .cart:hover{
-    background-color: red;
+    background-color: #c5a880;
 }
 body{
     margin:0;
 }
-
 .checkout { /*possible have 'view cart' text that when hovered over will have the transition effect and make the text disappear when viewing cart?*/
     height: 1px;/*either hover effect or on click effect. might be good to make it more permanent when trying to pay etc*/
     width: auto;
     transition: height 1.5s;
 }
-
 .checkout:hover {
     height: 100px;
 }
 
 @media only screen and (min-width: 1024px){
-
+    .menuItems{
+        list-style: none;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-start;
+        width: auto;
+        margin-left: 30px;
+        flex-wrap: wrap;
+    }
+    .mainHeader{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #c5beb4;
+        width: 100%;
+        height: 65px;
+        list-style: none;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        color: #221c14;
+    }
+    .cart:hover{
+        background-color: #221c14;
+        color: #c5beb4;
+    }
+    a:link {        
+        text-decoration: none; 
+        color: #221c14;
+    }
+    a:hover {
+        color: #221c14;
+    }
+    a:visited {
+        color: #221c14;
+    }
 }
 
