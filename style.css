@@ -1,10 +1,4 @@
 
-
-@media only screen and (min-width: 1024px){
-    
-}
-
-
 .mainHeader{
     display: flex;
     align-items: center;
@@ -17,22 +11,34 @@
     align-items: center;
     text-decoration: none;
 }
+.headerList{
+    display:none;
+}
+
+.companyName{
+    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
 .li, ul{
-    list-style: none;
-    text-decoration: none;
-    display: flex;
-    align-items: flex-end;
-   
-    width: auto;
-    margin-right: 7px;
+    
+        list-style: none;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-end;
+       
+        width: auto;
+        margin-right: 7px;
+    
 }
 .cart{
     border-radius: 5px;
     padding: 7px;
     font-family: 'Montserrat', sans-serif;
+    margin-right: 15px;
 }
 .cart:hover{
-    background-color: red;
+    background-color: #c5a880;
 }
 body{
     margin:0;
@@ -49,6 +55,14 @@ body{
 }
 
 @media only screen and (min-width: 1024px){
-
+    .li, ul{
+        list-style: none;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-end;
+       
+        width: auto;
+        margin-right: 7px;
+    }
 }
 
