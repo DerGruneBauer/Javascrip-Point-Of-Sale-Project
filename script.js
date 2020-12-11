@@ -72,3 +72,6 @@ document.querySelector('.mateDes').innerHTML = `${cafeItems[10].name}<br>${cafeI
 document.querySelector('.saladDes').innerHTML = `${cafeItems[11].name}<br>${cafeItems[11].description}<br>${cafeItems[11].price}`;
 document.querySelector('.soupDes').innerHTML = `${cafeItems[12].name}<br>${cafeItems[12].description}<br>${cafeItems[12].price}`;
 document.querySelector('.pastryDes').innerHTML = `${cafeItems[13].name}<br>${cafeItems[13].description}<br>${cafeItems[13].price}`;
+
+
+
