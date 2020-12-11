@@ -61,7 +61,7 @@ body{
         list-style: none;
         text-decoration: none;
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         width: auto;
         margin-left: 30px;
         flex-wrap: wrap;
