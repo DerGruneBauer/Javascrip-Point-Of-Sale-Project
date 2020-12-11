@@ -11,7 +11,15 @@
     text-decoration: none;
 }
 .headerList{
-    display:
+    display:none;
+}
+.coffeeHeader, .hotDrinkHeader, .coldDrinkHeader, .foodHeader{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 10px solid #532e1c;
+    border-radius: 10px;
+    margin-right: 33%;
+    margin-left: 15px;
 }
 .companyName{
     margin-left: 15px;
