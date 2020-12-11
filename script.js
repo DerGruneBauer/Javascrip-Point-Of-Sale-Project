@@ -18,8 +18,11 @@ const cafeItems = [
 
 let image = document.querySelectorAll('img');
 let deleteButton = document.querySelectorAll('.delete');
+let checkout = document.querySelector('.checkoutItems');
 let cart = [];
 let totalCost = 0;
+let newCartItem;
+let index;
 
 
 //Add to cart function
@@ -28,35 +31,37 @@ image.forEach((image) => {
         //listen for click on specific image. collect ID/index number and return the object at that index to cart
         let imageParent = image.parentNode;
         let imageId = imageParent.id;
+        index = cart.length;
         let idNum = imageId.substring(1);
-        console.log(idNum); 
-
         cart.push(cafeItems[idNum]);
-        console.log(cart);
 
         //create new div with pertinent info to add to cart when image is clicked.
-        let checkout = document.querySelector('.checkoutItems');
+        
         let cost = document.querySelector('.totalCost');
-        let newCartItem = document.createElement("div");
-        let remove = document.createElement('button');
-        remove.classList.add('delete'); //class called delete added to remove button
-        remove.onclick = removeFromCart;
-        remove.innerHTML = 'X';
+        newCartItem = document.createElement("div");
         let itemDetails = document.createTextNode(`${cafeItems[idNum].name} will cost ${cafeItems[idNum].price}`);
         newCartItem.appendChild(itemDetails);
         checkout.appendChild(newCartItem);
-        newCartItem.appendChild(remove);
-
+        newCartItem.innerHTML = `${newCartItem.innerHTML} <button id=I${index} class ="delete" onclick='removeFromCart()'>X</button>`;
         totalCost = cafeItems[idNum].price + totalCost;
         cost.innerHTML = (`<strong>Total Cost: </strong>${totalCost}`);
-    })
+    }) 
 
 })
 
+
+
 //Removal of items from cart
 
-const removeFromCart = function () {
-    
+let removeFromCart = function () {
+
+    let cartItems = checkout.childNodes;
+    cartItems.forEach((newCartItem) => {
+        let item = newCartItem.lastChild.id;
+        let itemsIndex = document.getElementById(item);
+        console.log(itemsIndex.parentNode);
+
+    })
 }
 
 
