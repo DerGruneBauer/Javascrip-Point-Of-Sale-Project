@@ -65,6 +65,7 @@ body{
         width: auto;
         margin-left: 30px;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .mainHeader{
         display: flex;
@@ -78,6 +79,7 @@ body{
         align-items: center;
         text-decoration: none;
         color: #221c14;
+        font: 'Montserrat', sans-serif;
     }
     .cart:hover{
         background-color: #221c14;
@@ -92,6 +94,21 @@ body{
     }
     a:visited {
         color: #221c14;
+    }
+    .cart{
+        color:#c5beb4;
+    }
+    .headerList{
+        display:flex;
+    }
+    .coffeeHeader, .hotDrinkHeader, .coldDrinkHeader, .foodHeader{
+        font-size: 50px;
+        font-family: 'Montserrat', sans-serif;
+        border-bottom: 10px solid #221c14;
+        border-radius: 10px;
+        margin-right: 33%;
+        margin-left: 15px;
+        color: #c5beb4;
     }
 }
 
