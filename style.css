@@ -1,3 +1,10 @@
+
+
+@media only screen and (min-width: 1024px){
+    
+}
+
+
 .mainHeader{
     display: flex;
     align-items: center;
@@ -44,3 +51,4 @@ body{
 @media only screen and (min-width: 1024px){
 
 }
+
