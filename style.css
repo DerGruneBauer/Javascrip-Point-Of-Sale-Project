@@ -61,6 +61,7 @@ body{
         align-items: flex-end;
         width: auto;
         margin-left: 30px;
+        flex-wrap: wrap;
     }
     .mainHeader{
         display: flex;
