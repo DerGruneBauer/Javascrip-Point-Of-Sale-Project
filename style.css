@@ -18,11 +18,11 @@ body{
 }
 
 .checkout { /*possible have 'view cart' text that when hovered over will have the transition effect and make the text disappear when viewing cart?*/
-    height: 1px;/*either hover effect or on click effect. might be good to make it more permanent when trying to pay etc*/
+    height: auto;/*either hover effect or on click effect. might be good to make it more permanent when trying to pay etc*/
     width: auto;
     transition: height 1.5s;
 }
 
-.checkout:hover {
+/* .checkout:hover {
     height: 100px;
-}
+} */
