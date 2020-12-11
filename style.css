@@ -10,6 +10,82 @@
     align-items: center;
     text-decoration: none;
 }
+.dripCoffee, .espresso, .latte, .americano, .cappucino, .tea, .hotChoco, .mocha, .icedTea, .water, .mate, .salad, .soup, .pastry {
+    display:flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.dripCoffee{
+    margin-left: -22px;
+}
+.dripCoffeeDes{
+    margin-left: 19px;
+}
+.espresso{
+    margin-left: -41px;
+}
+
+.americano{
+    margin-left: -20px;
+}
+
+.americanoDes{
+    margin-left: 16px;
+}
+.latteDes{
+    margin-left: 40px;
+}
+.cappucino{
+    margin-left: -23px;
+}
+.cappucinoDes{
+    margin-left: 19px;
+}
+.hotChoco{
+    margin-left: -9px;
+}
+.hotChocoDes{
+    margin-left: 46px
+}
+.mocha{
+    margin-left: -30px;
+}
+.mochaDes{
+    margin-left: 41px;
+}
+.icedTea{
+    margin-left: 10px
+}
+.icedTeaDes{
+    margin-left: 78px;
+}
+.water{
+    margin-left: -35px;
+}
+.waterDes{
+    margin-left: 55px;
+}
+.mate{
+    margin-left: -13px;
+}
+.salad{
+    margin-left: -30px;
+}
+.saladDes{
+    margin-left: 17px;
+}
+.soup{
+    margin-left:-35px;
+}
+.soupDes{
+    margin-left: 16px;
+}
+.pastry{
+    margin-left: -15px;
+}
+.pastryDes{
+    margin-left: 19px;
+}
 .headerList{
     display:none;
 }
