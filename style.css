@@ -112,10 +112,14 @@
         margin-right: 7px;
 }
 .cart{
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
+    border: none;
     padding: 7px;
     font-family: 'Montserrat', sans-serif;
     margin-right: 15px;
+    outline: none;
+    position: absolute;
+    right: 0px;
 }
 .cart:hover{
     background-color: #c5a880;
@@ -123,13 +127,16 @@
 body{
     margin:0;
 }
-.checkout { /*possible have 'view cart' text that when hovered over will have the transition effect and make the text disappear when viewing cart?*/
-    height: 1px;/*either hover effect or on click effect. might be good to make it more permanent when trying to pay etc*/
-    width: auto;
-    transition: height 1.5s;
+#checkout { 
+    width: 0px;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    border-radius: 5px 0 0 5px;
+    background-color: #e6e6e6;
 }
-.checkout:hover {
-    height: 100px;
+.checkoutItems, .totalCost {
+    display: none;
 }
 
 @media only screen and (min-width: 1024px){
@@ -172,7 +179,7 @@ body{
         color: #221c14;
     }
     .cart{
-        color:#c5beb4;
+        color: black;
     }
     .headerList{
         display:flex;

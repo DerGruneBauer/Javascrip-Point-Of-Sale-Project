@@ -19,48 +19,85 @@ const cafeItems = [
 let image = document.querySelectorAll('img');
 let deleteButton = document.querySelectorAll('.delete');
 let checkout = document.querySelector('.checkoutItems');
+let checkoutOutside = document.getElementById('checkout');
+checkoutOutside.style.width = "0px";
+let cartButton = document.querySelector('.cart');
+let cost = document.querySelector('.totalCost');
 let cart = [];
 let totalCost = 0;
 let newCartItem;
 let index;
 
+//Toggle cart open or close
+const toggleCart = () => {
+
+    if (checkoutOutside.style.width == '0px'){
+        checkoutOutside.style.width = '150px';
+        checkoutOutside.style.padding = '10px';
+        checkoutOutside.style.transition = 'width 1s'
+        checkout.style.display = 'block';
+        cost.style.display = 'block';
+    } else {
+        checkoutOutside.style.height = 'auto';
+        checkoutOutside.style.width = '0px';
+        checkoutOutside.style.padding = '0px';
+        checkout.style.display = 'none';
+        cost.style.display = 'none';
+        checkoutOutside.style.transition = 'width 1s'
+    }
+}
 
 //Add to cart function
 image.forEach((image) => {
     image.addEventListener("click", (addToCart) => {
-        //listen for click on specific image. collect ID/index number and return the object at that index to cart
-        let imageParent = image.parentNode;
-        let imageId = imageParent.id;
+       let imageParent = image.parentNode;
+       let imageId = imageParent.id;
         index = cart.length;
         let idNum = imageId.substring(1);
         cart.push(cafeItems[idNum]);
-
-        //create new div with pertinent info to add to cart when image is clicked.
         
-        let cost = document.querySelector('.totalCost');
         newCartItem = document.createElement("div");
-        let itemDetails = document.createTextNode(`${cafeItems[idNum].name} will cost ${cafeItems[idNum].price}`);
+        let itemDetails = document.createTextNode(`${cafeItems[idNum].name} • ${cafeItems[idNum].price}`);
         newCartItem.appendChild(itemDetails);
         checkout.appendChild(newCartItem);
         newCartItem.innerHTML = `${newCartItem.innerHTML} <button id=I${index} class ="delete" onclick='removeFromCart()'>X</button>`;
         totalCost = cafeItems[idNum].price + totalCost;
+        newCartItem.style.display = 'flex';
+        newCartItem.style.justifyContent = 'space-between';
         cost.innerHTML = (`<strong>Total Cost: </strong>${totalCost}`);
+        cartButton.innerHTML = `${cart.length} items in your cart`;
     }) 
 
 })
 
-
-
-//Removal of items from cart
+//Remove items from cart function
 
 let removeFromCart = function () {
-
     let cartItems = checkout.childNodes;
+
     cartItems.forEach((newCartItem) => {
+       const deleteItem = () => {
         let item = newCartItem.lastChild.id;
         let itemsIndex = document.getElementById(item);
-        console.log(itemsIndex.parentNode);
-
+        let str =  itemsIndex.parentNode.innerText;
+        let price = str.match(/[\d\.]+/); 
+        let priceNumber = parseFloat(price[0]);
+        totalCost = totalCost - priceNumber;
+        cost.innerHTML = `<strong>Total Cost: </strong>${totalCost}`;
+        cart.splice(itemsIndex, 1);
+        cartButton.innerHTML = `${cart.length} items in your cart`;
+        if (cost.innerHTML == `<strong>Total Cost: </strong>0`){
+            cost.innerHTML = ``;
+            checkoutOutside.style.height = 'auto';
+        checkoutOutside.style.width = '0px';
+        checkoutOutside.style.padding = '0px';
+        checkout.style.display = 'none';
+        cost.style.display = 'none';
+        checkoutOutside.style.transition = 'width 1s'
+        }
+        itemsIndex.parentNode.remove();
+       }
+       newCartItem.addEventListener("click", deleteItem);
     })
 }
 
