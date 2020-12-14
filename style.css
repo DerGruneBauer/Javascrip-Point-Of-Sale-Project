@@ -97,7 +97,7 @@
     margin-right: 33%;
     margin-left: 15px;
 }
-.companyName{
+.companyName, .companyName2, .companyName3, .companyName4, .companyName5{
     margin-left: 15px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -192,6 +192,21 @@ body{
         margin-right: 33%;
         margin-left: 15px;
         color: #c5beb4;
+    }
+
+    .hide{
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .show{
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .coffees, .hotDrinks, .coldDrinks, .food{
+        position: absolute;
+        transition: opacity 0.5s ease;
     }
 }
 

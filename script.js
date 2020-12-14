@@ -118,5 +118,58 @@ document.querySelector('.saladDes').innerHTML = `${cafeItems[11].name}<br>${cafe
 document.querySelector('.soupDes').innerHTML = `${cafeItems[12].name}<br>${cafeItems[12].description}<br>${cafeItems[12].price}`;
 document.querySelector('.pastryDes').innerHTML = `${cafeItems[13].name}<br>${cafeItems[13].description}<br>${cafeItems[13].price}`;
 
+//hides or shows sections of the menu in desktop version
+let showMenu = () =>{
+    let coffeeLink = document.querySelector('.companyName2')
+    let hotLink = document.querySelector('.companyName3')
+    let coldLink = document.querySelector('.companyName4')
+    let foodLink = document.querySelector('.companyName5')
 
+    let coffeeMenu = document.querySelector('.coffees')
+    let hotMenu = document.querySelector('.hotDrinks')
+    let coldMenu = document.querySelector('.coldDrinks')
+    let foodMenu = document.querySelector('.food')
+
+    coffeeLink.addEventListener('click', () =>{
+        coffeeMenu.classList.add('show')
+        hotMenu.classList.add('hide')
+        coldMenu.classList.add('hide')
+        foodMenu.classList.add('hide')
+        hotMenu.classList.remove('show')
+        coldMenu.classList.remove('show')
+        foodMenu.classList.remove('show')
+    });
+
+    hotLink.addEventListener('click', () =>{
+        hotMenu.classList.add('show')
+        coffeeMenu.classList.add('hide')
+        coldMenu.classList.add('hide')
+        foodMenu.classList.add('hide')
+        coffeeMenu.classList.remove('show')
+        coldMenu.classList.remove('show')
+        foodMenu.classList.remove('show')
+    });
+
+    coldLink.addEventListener('click', () =>{
+        coldMenu.classList.add('show')
+        coffeeMenu.classList.add('hide')
+        hotMenu.classList.add('hide')
+        foodMenu.classList.add('hide')
+        coffeeMenu.classList.remove('show')
+        hotMenu.classList.remove('show')
+        foodMenu.classList.remove('show')
+    });    
+
+    foodLink.addEventListener('click', () =>{
+        foodMenu.classList.add('show')
+        coffeeMenu.classList.add('hide')
+        hotMenu.classList.add('hide')
+        coldMenu.classList.add('hide')
+        coffeeMenu.classList.remove('show')
+        hotMenu.classList.remove('show')
+        coldMenu.classList.remove('show')
+    }); 
+}
+
+showMenu();
 
