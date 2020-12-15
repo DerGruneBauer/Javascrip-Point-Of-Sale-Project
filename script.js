@@ -267,4 +267,4 @@ const finalPayment = () => {
 
 const exitValidationForm = () => { //done
     validationForm.style.display = 'none';
-}
+} 
