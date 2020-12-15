@@ -158,24 +158,24 @@ body{
 
 .validationForm{
     position: absolute;
-    background-color: pink;
-    height: 300px;
+    height: auto;
     left: 5%;
     top: 25%;
     z-index: 99;
     width: 90%;
     background-color: #e6e6e6;
-    padding-left: 5px;
-    padding-top: 5px;
+    padding: 5px 0 20px 10px;
     box-shadow: 5px 5px 25px -2px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.finalPayment{
+.finalPayment, .startOver{
     font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
 }
 .cashButton{
     font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
 }
 .cardButton{
     font-family: 'Montserrat', sans-serif;
@@ -264,7 +264,6 @@ body{
     background-color: #c5beb4;
     font-family: 'Montserrat', sans-serif;
     font-size: small;
-    height: 15em;
     width: 60em;   
     position:absolute;
     top: 20%;
