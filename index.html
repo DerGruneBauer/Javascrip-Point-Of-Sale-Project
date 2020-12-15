@@ -17,8 +17,24 @@
         <li><div class="companyName5"><a href="#">Food</a></div></li>
         </ul>
     </header>
-    <div id="checkout"><div class="checkoutItems"></div><br><div class="totalCost"></div></div>
+    <div id="checkout"><div class="checkoutItems"></div><br><div class="totalCost"></div><button class="checkoutButton" onclick="checkoutScreen()">Checkout</button></div>
     <button class="cart" onclick="toggleCart()">0 items in your cart</button>
+    <div class = "validationForm">
+        <button class="exitValidationForm">X</button>
+        <button class="cashButton" onclick="cashOption()">Cash</button>
+        <button class="cardButton" onclick="cardOption()">Card</button>
+        <label for="cashInput">How Much Cash?</label>
+        <input type="number" id="cashInput">
+        <label for="cardNumber">Card Number:</label>
+        <input type="string" id="cardNumber">
+        <label for="CVV">CVV:</label>
+        <input type="string" id="CVV">
+        <label for="expiration">Expiration:</label>
+        <input type="string" id="expiration">
+        <div class="cashChange"></div>
+        <button class="finalPayment">Complete Payment</button>
+        <div class="receipt"></div>
+    </div>
     <div class="menuItems">
         <div class="coffees">
             <div class="coffeeHeader">Coffee</div>
