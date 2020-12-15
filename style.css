@@ -139,6 +139,38 @@ body{
     display: none;
 }
 
+.totalCost {
+    margin-bottom: 10px;
+}
+.checkoutButton {
+    height: 20px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    background-color: lightgray;
+    display: none;
+}
+.checkoutButton:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+.validationForm{
+    position: absolute;
+    background-color: pink;
+    height: 300px;
+    left: 20%;
+    top: 20%;
+    z-index: 99;
+}
+
+.exitValidationForm {
+    float: right;
+}
+.exitValidationForm:hover{
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 1024px){
     .menuItems{
         list-style: none;

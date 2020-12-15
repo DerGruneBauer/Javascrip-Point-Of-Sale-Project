@@ -23,6 +23,7 @@ let checkoutOutside = document.getElementById('checkout');
 checkoutOutside.style.width = "0px";
 let cartButton = document.querySelector('.cart');
 let cost = document.querySelector('.totalCost');
+let checkoutButton = document.querySelector('.checkoutButton');
 let cart = [];
 let totalCost = 0;
 let newCartItem;
@@ -37,6 +38,7 @@ const toggleCart = () => {
         checkoutOutside.style.transition = 'width 1s'
         checkout.style.display = 'block';
         cost.style.display = 'block';
+        checkoutButton.style.display = 'block';
     } else {
         checkoutOutside.style.height = 'auto';
         checkoutOutside.style.width = '0px';
@@ -44,6 +46,7 @@ const toggleCart = () => {
         checkout.style.display = 'none';
         cost.style.display = 'none';
         checkoutOutside.style.transition = 'width 1s'
+        checkoutButton.style.display = 'none';
     }
 }
 
@@ -173,3 +176,14 @@ let showMenu = () =>{
 
 showMenu();
 
+const checkoutScreen = () => {
+    let 
+}
+
+const cashOption = () => {
+
+}
+
+const cardOption = () => {
+
+}
