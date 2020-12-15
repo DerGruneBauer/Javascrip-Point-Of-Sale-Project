@@ -9,6 +9,7 @@
     flex-direction: row;
     align-items: center;
     text-decoration: none;
+    
 }
 .dripCoffee, .espresso, .latte, .americano, .cappucino, .tea, .hotChoco, .mocha, .icedTea, .water, .mate, .salad, .soup, .pastry {
     display:flex;
@@ -159,13 +160,31 @@ body{
     position: absolute;
     background-color: pink;
     height: 300px;
-    left: 20%;
-    top: 20%;
+    left: 5%;
+    top: 25%;
     z-index: 99;
+    width: 90%;
+    background-color: #e6e6e6;
+    padding-left: 5px;
+    padding-top: 5px;
+    box-shadow: 5px 5px 25px -2px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.finalPayment{
+    font-family: 'Montserrat', sans-serif;
+}
+.cashButton{
+    font-family: 'Montserrat', sans-serif;
+}
+.cardButton{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .exitValidationForm {
-    float: right;
+    position:absolute;
+    top: 5px;
+    right: 5px;
 }
 .exitValidationForm:hover{
     cursor: pointer;
@@ -229,16 +248,37 @@ body{
     .hide{
         pointer-events: none;
         opacity: 0;
+        transition: opacity 0.5s ease;
     }
 
     .show{
         pointer-events: all;
         opacity: 1;
+        transition: opacity 0.5s ease 0.5s;
     }
 
     .coffees, .hotDrinks, .coldDrinks, .food{
         position: absolute;
-        transition: opacity 0.5s ease;
     }
+.validationForm{
+    background-color: #c5beb4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+    height: 15em;
+    width: 60em;   
+    position:absolute;
+    top: 20%;
+    left: 25%;
+    z-index: 99;
+} 
+.finalPayment{
+    font-family: 'Montserrat', sans-serif;
+}
+.cashButton{
+    font-family: 'Montserrat', sans-serif;
+}
+.cardButton{
+    font-family: 'Montserrat', sans-serif;
+}
 }
 
