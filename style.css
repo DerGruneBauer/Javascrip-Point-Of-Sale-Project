@@ -241,5 +241,25 @@ body{
     .coffees, .hotDrinks, .coldDrinks, .food{
         position: absolute;
     }
+.validationForm{
+    background-color: #c5beb4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+    height: 15em;
+    width: 60em;   
+    position:absolute;
+    top: 20%;
+    left: 25%;
+    z-index: 99;
+} 
+.finalPayment{
+    font-family: 'Montserrat', sans-serif;
+}
+.cashButton{
+    font-family: 'Montserrat', sans-serif;
+}
+.cardButton{
+    font-family: 'Montserrat', sans-serif;
+}
 }
 
