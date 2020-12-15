@@ -197,16 +197,17 @@ body{
     .hide{
         pointer-events: none;
         opacity: 0;
+        transition: opacity 0.5s ease;
     }
 
     .show{
         pointer-events: all;
         opacity: 1;
+        transition: opacity 0.5s ease 0.5s;
     }
 
     .coffees, .hotDrinks, .coldDrinks, .food{
         position: absolute;
-        transition: opacity 0.5s ease;
     }
 }
 
