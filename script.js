@@ -174,16 +174,9 @@ let showMenu = () =>{
     }); 
 }
 
-showMenu();
-
-const checkoutScreen = () => {
-    let 
-}
 
 const cashOption = () => {
 
 }
 
 const cardOption = () => {
-
-}
