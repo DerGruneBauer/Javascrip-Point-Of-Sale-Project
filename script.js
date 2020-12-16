@@ -188,6 +188,11 @@ let cardExpirationInput = document.getElementById('expiration');
 let cardExpirationLabel = document.getElementById('expirationLabel');
 let cashLabel = document.getElementById('cashLabel');
 let cashInput = document.getElementById('cashInput');
+let cashButton = document.querySelector('.cashButton');
+let cardButton = document.querySelector('.cardButton');
+let startOverButton = document.querySelector('.startOver');
+let finalPaymentButton = document.querySelector('.finalPayment');
+startOverButton.style.display = 'none';
 cashLabel.style.display = 'none';
 cardNumberLabel.style.display = 'none';
 cardCVVLabel.style.display = 'none';
@@ -200,6 +205,8 @@ cashInput.style.display = 'none';
 let grandTotal = 0;
 
 const checkoutScreen = () => {
+    let mainHead = document.querySelector('.mainHeader');
+    let menuItems = document.querySelector('.menuItems');
     let receiptItems = document.querySelector('.receiptItems');
     let receiptTotal = document.querySelector('.receiptTotal');
     let newCart = [];
@@ -224,6 +231,10 @@ const checkoutScreen = () => {
     if (validationForm.style.display == 'none') {
         validationForm.style.display = 'block';
     }
+    mainHead.classList.remove('blurOff');
+    mainHead.classList.add('blurOn');
+    menuItems.classList.remove('blurOff');
+    menuItems.classList.add('blurOn');
 }
 
 const cashOption = () => {
@@ -258,13 +269,41 @@ const finalPayment = () => {
     let remainder = (grandTotal - cashTendered).toFixed(1);
     if (cashTendered > grandTotal) {
         lastMessage.innerHTML = `Your change is $${change}. Thank you!`
+        cashLabel.style.display = "none";
+        cashInput.style.display = "none";
+        cashButton.style.display = "none";
+        cardButton.style.display = 'none';
+        startOverButton.style.display = 'block';
+        finalPaymentButton.style.display = 'none';
     } else if (cashTendered == grandTotal) {
         lastMessage.innerHTML = `No change needed. Thank you!`
+        cashLabel.style.display = "none";
+        cashInput.style.display = "none";
+        cashButton.style.display = "none";
+        cardButton.style.display = 'none';
+        startOverButton.style.display = 'block';
+        finalPaymentButton.style.display = 'none';
     } else {
         lastMessage.innerHTML = `That is not enough money. You still owe $${remainder}.`
     }
+
+    if (cardNumberInput.value != "" && cardCVVInput.value != "" && cardExpirationInput.value != ""){
+       lastMessage.innerHTML = "Thank you for your order!"
+       cashButton.style.display = "none";
+       cardButton.style.display = 'none';
+       cardNumberInput.style.display = 'none';
+       cardCVVInput.style.display = 'none';
+       cardExpirationInput.style.display = 'none';
+       cardNumberLabel.style.display = 'none';
+       cardCVVLabel.style.display = 'none';
+       cardExpirationLabel.style.display = 'none';
+       startOverButton.style.display = 'block';
+       finalPaymentButton.style.display = 'none';
+    } 
 }
 
-const exitValidationForm = () => { //done
+const exitValidationForm = () => { 
+    let mainHead = document.querySelector('.mainHeader');
+    let menuItems = document.querySelector('.menuItems');
     validationForm.style.display = 'none';
-} 
+
