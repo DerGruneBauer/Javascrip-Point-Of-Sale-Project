@@ -190,6 +190,14 @@ body{
     cursor: pointer;
 }
 
+.blurOn{
+    filter: blur(2px);
+}
+
+.blurOff{
+    filter: none;
+}
+
 @media only screen and (min-width: 1024px){
     .menuItems{
         list-style: none;
