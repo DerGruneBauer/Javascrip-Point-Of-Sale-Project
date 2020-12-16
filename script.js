@@ -306,4 +306,4 @@ const exitValidationForm = () => {
     let mainHead = document.querySelector('.mainHeader');
     let menuItems = document.querySelector('.menuItems');
     validationForm.style.display = 'none';
-
+}
