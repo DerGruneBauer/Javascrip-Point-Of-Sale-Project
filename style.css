@@ -276,6 +276,7 @@ input::placeholder {
     background-color: #c5beb4;
     font-family: 'Montserrat', sans-serif;
     font-size: small;
+
     width: 60em;   
     position:absolute;
     top: 20%;
