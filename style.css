@@ -169,6 +169,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+input::placeholder {
+    color: lightgray;
+}
+
 .finalPayment, .startOver{
     font-family: 'Montserrat', sans-serif;
     margin-top: 10px;
