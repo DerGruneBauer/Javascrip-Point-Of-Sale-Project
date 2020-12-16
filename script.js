@@ -306,4 +306,12 @@ const exitValidationForm = () => {
     let mainHead = document.querySelector('.mainHeader');
     let menuItems = document.querySelector('.menuItems');
     validationForm.style.display = 'none';
+    mainHead.classList.add('blurOff');
+    mainHead.classList.remove('blurOn');
+    menuItems.classList.add('blurOff');
+    menuItems.classList.remove('blurOn');
+}
 
+const newOrder = () => {
+    location.reload();
+} 
