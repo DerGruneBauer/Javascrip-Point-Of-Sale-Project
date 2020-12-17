@@ -307,3 +307,7 @@ const exitValidationForm = () => {
     let menuItems = document.querySelector('.menuItems');
     validationForm.style.display = 'none';
 }
+
+const newOrder = () => {
+    location.reload();
+}
