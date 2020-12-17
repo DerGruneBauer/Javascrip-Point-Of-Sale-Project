@@ -305,6 +305,10 @@ const finalPayment = () => {
 const exitValidationForm = () => { 
     let mainHead = document.querySelector('.mainHeader');
     let menuItems = document.querySelector('.menuItems');
+    mainHead.classList.add('blurOff');
+    mainHead.classList.remove('blurOn');
+    menuItems.classList.add('blurOff');
+    menuItems.classList.remove('blurOn');
     validationForm.style.display = 'none';
 }
 
