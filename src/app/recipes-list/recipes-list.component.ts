@@ -11,15 +11,15 @@ import { CommonModule } from '@angular/common';
 })
 export class RecipesListComponent implements OnInit {
 
-  initialRecipeList: any;
-  recipeList: [];
+  initialRecipeList;
+  recipeList;
 
   constructor(private RecipeServiceService: RecipeServiceService) { }
 
   ngOnInit(): void {
 
     this.RecipeServiceService.ApiCall()
-      .subscribe((data: object) => {
+      .subscribe((data) => {
       this.initialRecipeList = data;
       this.recipeList = this.initialRecipeList.hits;
       console.log(this.recipeList);
