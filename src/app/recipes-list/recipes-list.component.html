@@ -1,0 +1,19 @@
+<div class="recipeListWrapper">
+    <div class="individualRecipe" *ngFor = "let recipe of recipeList; let i = index;">
+        {{ this.recipeList[i].recipe.label }}
+        <img
+            src="{{ this.recipeList[i].recipe.image }}"
+            alt="{{ this.recipeList[i].recipe.label }}"
+          />
+    </div>
+    <!-- <div class="initialMessage" *ngIf = "recipeList.length < 1">Nothing to see. Why don't you search for something?</div> -->
+</div>
+
+<!-- Questions on how we want to set this up from a arcitechure perspective. We could have home screen with search query that opens
+up into new page once user clicks submit, or we could have home page be connected with recipe list page and search bar at top
+that updates single page. Basically need to decide between 2 or 3 pages. This will impact on whether we use app component or keep everything
+in the recipe list component.  -->
+
+<!-- Also need to be aware of insanely low hits per minute on our API. We only get 5 per minute?? -->
+<!-- Need a way to show additional information on each recipe. Could do this with 'pop up' then when clicking on an image 
+    shows additional information. would need to create a new componenet to house this information.  -->
