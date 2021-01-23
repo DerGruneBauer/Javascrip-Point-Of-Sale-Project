@@ -7,13 +7,21 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RecipePopupComponent } from './recipe-popup/recipe-popup.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
     FavoritesPageComponent,
-    RecipesListComponent
+    RecipesListComponent,
+    RecipePopupComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
