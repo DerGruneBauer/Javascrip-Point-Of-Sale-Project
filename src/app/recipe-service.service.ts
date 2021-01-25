@@ -9,12 +9,9 @@ export class RecipeServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
-  userInput: string = '';
   ApiId: string = '1969a411';
   ApiKey: string = '720b7458df1ca9dafe9916c7b299aa0f';
-
   ApiUrl: string = `https://api.edamam.com/search?q=rice&app_id=${this.ApiId}&app_key=${this.ApiKey}`;
-  
 
   //needed to add HTTPclient in app.module and also needed to add recipelist componenet in base component (app.component)
 
@@ -22,7 +19,10 @@ export class RecipeServiceService {
      return this.httpClient.get(this.ApiUrl);
   }
 
-
+  getSearchResults(ingredient: string) {
+   let searchUrl: string = `https://api.edamam.com/search?q=${ingredient}&app_id=${this.ApiId}&app_key=${this.ApiKey}`
+    return this.httpClient.get(searchUrl)
+  }
 
 
 }

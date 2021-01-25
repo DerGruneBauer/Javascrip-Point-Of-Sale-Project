@@ -1,0 +1,9 @@
+.browseWrapper {
+    display: flex;
+    
+}
+.mealType, .dietaryRestrictions, .cuisineType {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}

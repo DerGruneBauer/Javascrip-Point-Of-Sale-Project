@@ -6,3 +6,7 @@ body {
 button, a {
     cursor: pointer;
 }
+
+button, input {
+    outline: none;
+}

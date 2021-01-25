@@ -7,6 +7,4 @@ import { RecipeServiceService } from './recipe-service.service';
 })
 export class AppComponent {
   title = 'AngularRecipeProject';
-
-
 }
