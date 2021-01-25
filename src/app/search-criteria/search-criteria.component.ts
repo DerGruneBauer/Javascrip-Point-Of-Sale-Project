@@ -12,6 +12,7 @@ export class SearchCriteriaComponent implements OnInit {
 
   initialSearchItems: any;
   searchItems = [];
+  showBrowseForm: boolean = false;
 
   ngOnInit(): void {
     
