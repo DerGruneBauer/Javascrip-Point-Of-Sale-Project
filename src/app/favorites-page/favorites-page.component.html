@@ -1,0 +1,22 @@
+<!-- this will go on each recipe that shows after search
+<!-- solid heart -->
+<i class="fas fa-heart" style="color: red"></i>
+<!-- open heart -->
+<i class="far fa-heart"></i>
+
+this goes in the
+<head>
+  <script
+    src="https://kit.fontawesome.com/6e4b0d82b5.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+-->
+
+<div class="favorites-container">
+  <div class="favorites"></div>
+  <div *ngIf="favoriteRecipes.length === 0">No Favorites Yet!</div>
+  <div class="favorite-recipes-container">
+    <!-- put each favorited recipe in here -->
+  </div>
+</div>
