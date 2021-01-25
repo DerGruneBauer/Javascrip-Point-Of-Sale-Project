@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-browse-feature',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrowseFeatureComponent implements OnInit {
 
+  @Output() find = new EventEmitter;
   constructor() { }
 
   ngOnInit(): void {
   }
+
+findRecipe(query: string){
+  this.find.emit(query);
+}
 
 }

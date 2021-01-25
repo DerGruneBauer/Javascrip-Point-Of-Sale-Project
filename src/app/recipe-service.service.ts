@@ -20,7 +20,8 @@ export class RecipeServiceService {
   }
 
   getSearchResults(ingredient: string) {
-   let searchUrl: string = `https://api.edamam.com/search?q=${ingredient}&app_id=${this.ApiId}&app_key=${this.ApiKey}`
+   let searchUrl: string = `https://api.edamam.com/search?q=${ingredient}&app_id=${this.ApiId}&app_key=${this.ApiKey}&diet=${ingredient}`
+  //  diet is working. need to set up potential seperate api call for health search
     return this.httpClient.get(searchUrl)
   }
 

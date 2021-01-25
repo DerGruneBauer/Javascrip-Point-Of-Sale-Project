@@ -1,7 +1,7 @@
 <div class="searchWrapper">
   <h1>Search For Recipes</h1>
   <div class="searchFunction">
-      <button class="browseButton" (click)="showPostForm = !showPostForm">Browse</button>
+      <button class="browseButton" (click)="showBrowseForm = !showBrowseForm">Browse</button>
     <input
       type="text/css"
       placeholder="Ex.'Vegetarian' or 'Carrots'"
@@ -9,25 +9,9 @@
     /><button class="submitButton" (click)="searchRecipes()">Submit</button
     ><br />
   </div>
-  <app-browse-feature *ngIf="showPostForm"></app-browse-feature>
-  <div class="buttonsWrapper">
-    <button class="calorieButton">Under 500 Calories</button>
-    <button (click)="buttonSearchRecipes('vegan')" class="veganButton">
-      Vegan
-    </button>
-    <button (click)="buttonSearchRecipes('keto')" class="ketoButton">
-      Keto
-    </button>
-    <button
-      (click)="buttonSearchRecipes('mediterranean')"
-      class="mediterraneanButton"
-    >
-      Mediterranean
-    </button>
-  </div>
+  <app-browse-feature *ngIf="showBrowseForm" (find)="buttonSearchRecipes($event)"></app-browse-feature>
   <div class="emptyMessage" *ngIf="searchItems.length < 1">
-    Search for something above or click on one of the buttons to see search
-    results
+    Search for something above or click on the browse button to view additional options
   </div>
   <div class="searchItemsWrapper">
     <div class="searchItem" *ngFor="let item of searchItems; let i = index">
