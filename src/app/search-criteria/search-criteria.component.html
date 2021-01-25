@@ -7,9 +7,9 @@
       placeholder="Ex.'Vegetarian' or 'Carrots'"
       (keyup.enter)="searchRecipes()"
     /><button class="submitButton" (click)="searchRecipes()">Submit</button
-    ><br />
+    >
   </div>
-  <app-browse-feature *ngIf="showBrowseForm" (find)="buttonSearchRecipes($event)"></app-browse-feature>
+  <app-browse-feature *ngIf="showBrowseForm" (find)="dietSearchRecipes($event)" (findHealth)="healthSearchRecipes($event)"></app-browse-feature>
   <div class="emptyMessage" *ngIf="searchItems.length < 1">
     Search for something above or click on the browse button to view additional options
   </div>

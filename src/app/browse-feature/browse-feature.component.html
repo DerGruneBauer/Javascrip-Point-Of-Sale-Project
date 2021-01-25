@@ -1,20 +1,20 @@
 <div class="browseWrapper">
     <div class="dietType">
-        <strong>Diet</strong>
+        <div class="title">Diet Types</div>
         <a (click)="findRecipe('balanced')">Balanced</a>
         <a (click)="findRecipe('high-protein')">High Protein</a>
         <a (click)="findRecipe('low-carb')">Low Carb</a>
     </div>
     <div class="dietaryRestrictions">
-        <strong>Allergy</strong>
-        <a (click)="findRecipe('peanut-free')">Peanut Free</a>
-        <a (click)="findRecipe('tree-nut-free')">Tree Nut Free</a>
-        <a (click)="findRecipe('alcohol-free')">Alcohol Free</a>
+        <div class="title">Allergy Friendly</div>
+        <a (click)="findRecipeHealth('peanut-free')">Peanut Free</a>
+        <a (click)="findRecipeHealth('tree-nut-free')">Tree Nut Free</a>
+        <a (click)="findRecipeHealth('alcohol-free')">Alcohol Free</a>
     </div>
     <div class="healthType">
-        <strong>Health</strong>
-        <a (click)="findRecipe('low-sugar')">Sugar Concious</a>
-        <a (click)="findRecipe('vegan')">Vegan</a>
-        <a (click)="findRecipe('vegetarian')">Vegetarian</a>
+        <div class="title">Healthy Eating</div>
+        <a (click)="findRecipeHealth('sugar-conscious')">Sugar Conscious</a>
+        <a (click)="findRecipeHealth('vegan')">Vegan</a>
+        <a (click)="findRecipeHealth('vegetarian')">Vegetarian</a>
     </div>
 </div>

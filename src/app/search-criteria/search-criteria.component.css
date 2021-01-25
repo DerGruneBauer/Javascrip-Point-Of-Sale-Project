@@ -9,9 +9,14 @@
 .emptyMessage {
     margin-top: 30px;
     font-size: 20px;
+    text-align: center;
 }
 
 /* Input and Buttons for Searching */
+.searchFunction{
+    display: flex;
+}
+
 input {
     border: solid black 2px;
     width: 300px;

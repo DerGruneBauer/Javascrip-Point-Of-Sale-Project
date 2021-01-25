@@ -8,6 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class BrowseFeatureComponent implements OnInit {
 
   @Output() find = new EventEmitter;
+  @Output() findHealth = new EventEmitter;
   constructor() { }
 
   ngOnInit(): void {
@@ -15,6 +16,9 @@ export class BrowseFeatureComponent implements OnInit {
 
 findRecipe(query: string){
   this.find.emit(query);
+}
+findRecipeHealth(query: string){
+  this.findHealth.emit(query);
 }
 
 }

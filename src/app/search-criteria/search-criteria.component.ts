@@ -26,11 +26,17 @@ export class SearchCriteriaComponent implements OnInit {
   });
 }
 
-buttonSearchRecipes(query: string) {
-  this.RecipeServiceService.getSearchResults(query).subscribe((data) => {
+dietSearchRecipes(query: string) {
+  this.RecipeServiceService.getDietSearchResults(query).subscribe((data) => {
     this.initialSearchItems = data;
     this.searchItems = this.initialSearchItems.hits;
-    console.log(data);
+});
+}
+
+healthSearchRecipes(query: string) {
+  this.RecipeServiceService.getHealthSearchResults(query).subscribe((data) => {
+    this.initialSearchItems = data;
+    this.searchItems = this.initialSearchItems.hits;
 });
 }
 

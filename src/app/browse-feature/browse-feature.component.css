@@ -1,9 +1,24 @@
 .browseWrapper {
     display: flex;
-    
+    border: solid grey 2px;
+    background-color: whitesmoke;
+    margin-top: 10px;
+    border-radius: 5px;
 }
+
 .dietType, .dietaryRestrictions, .healthType {
     display: flex;
     flex-direction: column;
     margin: 20px;
+    font-size: 17px;
+}
+
+a {
+    margin: 5px;
+}
+
+.title {
+    border-bottom: solid 1px lightgray;
+    font-weight: bold;
+    font-size: 20px;
 }
