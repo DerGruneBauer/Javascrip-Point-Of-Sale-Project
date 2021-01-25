@@ -8,11 +8,12 @@ const routes: Routes = [
   { path: 'favorites', component: FavoritesPageComponent },
   { path: '', component: RecipesListComponent },
   { path: 'recipeList', component: RecipesListComponent },
-  { path: 'home', component: AppComponent }
+  { path: 'home', component: AppComponent },
+  { path: '**', component: RecipesListComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
